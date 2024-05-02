@@ -15,6 +15,7 @@ jobs:
         with:
           repository: KobayashiAnzu/TODO-APP # Repo Aの所有者とリポジトリ名に置き換えてください
           ref: ${{ github.event.pull_request.head.sha }}
+          path: ./TODO-APP
 
       # Node.jsをセットアップ（バージョンは最新のもの）
       - uses: actions/setup-node@v4

@@ -13,7 +13,7 @@ jobs:
       - name: Checkout Repo TODO-APP
         uses: actions/checkout@v4
         with:
-          repository: KobayashiAnzu/TODO-APP # Repo Aの所有者とリポジトリ名に置き換えてください
+          repository: KobayashiAnzu/TODO-APP
           ref: ${{ github.event.pull_request.head.sha }}
           path: ./TODO-APP
 
@@ -29,6 +29,7 @@ jobs:
       #Nodeプロジェクト起動
       - name: Start Node project
         run: npm start &
+          wait-on http://localhost:3000
         working-directory: ./TODO-APP
 
       - name: Checkout Repo E2E-TEST

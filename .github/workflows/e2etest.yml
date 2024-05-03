@@ -29,7 +29,7 @@ jobs:
       #Nodeプロジェクト起動
       - name: Start Node project
         run: npm start &
-          wait-on http://localhost:3000
+             sleep 30
         working-directory: ./TODO-APP
 
       - name: Checkout Repo E2E-TEST

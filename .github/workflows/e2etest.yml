@@ -26,6 +26,10 @@ jobs:
       # アプリケーションの依存関係をインストール
       - name: Install dependencies
         run: npm install -g yarn && yarn
+      
+      #【yarn】グローバルにインストールしたパッケージの一覧を確認
+      - name: yarn global list
+        run: yarn global list
 
       #Nodeプロジェクト起動
       - name: Start Node project

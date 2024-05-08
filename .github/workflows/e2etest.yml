@@ -23,6 +23,9 @@ jobs:
         with:
           node-version: lts/*
 
+      - name: yarn install
+        run: yarn install
+
       # アプリケーションの依存関係をインストール
       - name: Install dependencies
         run: npm install -g yarn && yarn

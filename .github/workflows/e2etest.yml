@@ -23,9 +23,6 @@ jobs:
         with:
           node-version: lts/*
 
-      - name: yarn install
-        run: yarn install
-
       # アプリケーションの依存関係をインストール
       - name: Install dependencies
         run: npm install -g yarn && yarn
@@ -34,7 +31,6 @@ jobs:
       - name: Start Node project
         run: npm start &
           sleep 30
-        working-directory: ./TODO-APP
 
       - name: Checkout Repo E2E-TEST
         uses: actions/checkout@v4
